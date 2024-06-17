@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import todolist from "../assets/images/To_Do_List.png";
-import texttospeech from "../assets/images/speech_to_Text.png";
 import passwordgenerator from "../assets/images/password_generator.png";
 import gemini from "../assets/images/gemini.png";
 import resumebuilder from "../assets/images/Ai_resume_builder.png";
@@ -10,6 +9,19 @@ import leaderboard from "../assets/images/leaderBoard.png";
 import imagesearchapp from "../assets/images/image_search_app.png";
 import hackerrank from "../assets/images/Hackerrank.png";
 import Amazon from '../assets/images/Amazon_Clone.png';
+import geekfoods from '../assets/images/geekfoods.png';
+import ComfyStore from '../assets/images/comfystore.png';
+import cart from '../assets/images/cart.png'
+import translator from '../assets/images/translator.png'
+import grocerybud from '../assets/images/grocerybud.png'
+import aiimagegenerator from '../assets/images/aiimagegenerator.png'
+import textutils from '../assets/images/textutils.png'
+import imageeditor from '../assets/images/imageeditor.png'
+import budgetplanner from '../assets/images/budgetplanner.png'
+import speechtotext from '../assets/images/speechtotext.png'
+// import  from '../assets/images/'
+
+
 
 const projects = [
   {
@@ -21,6 +33,36 @@ const projects = [
   },
   {
     category: "ReactJs",
+    url: "https://comfy-shopping-by-anchit.netlify.app/",
+    imgSrc: ComfyStore,
+    imgAlt: "ComfyStore",
+    title: "Comfy Store Project",
+  },
+  {
+    category: "ReactJs",
+    url: "https://geeksfood-by-anchit.vercel.app/",
+    imgSrc: geekfoods,
+    imgAlt: "Geek Foods",
+    title: "Geek Foods Project",
+  },
+
+  {
+    category: "ReactJs",
+    url: "https://cart-by-anchit.netlify.app/",
+    imgSrc: cart,
+    imgAlt: "Cart",
+    title: "Cart",
+  },
+  {
+    category: "ReactJs",
+    url: "https://translator-by-anchit123.netlify.app/",
+    imgSrc: translator,
+    imgAlt: "Text-converter-image",
+    title: "Text Convertor Project",
+  },
+  
+  {
+    category: "ReactJs",
     url: "https://to-do-list-react-js-by-anchit-and-mohit.vercel.app/",
     imgSrc: todolist,
     imgAlt: "To Do List",
@@ -28,17 +70,53 @@ const projects = [
   },
   {
     category: "ReactJs",
+    url: "https://ai-image-generator-by-anchit.netlify.app/",
+    imgSrc: aiimagegenerator,
+    imgAlt: "AI Image Generator",
+    title: "AI Image Generator",
+  },
+  {
+    category: "ReactJs",
+    url: "https://main--textutils-by-anchit.netlify.app/",
+    imgSrc: textutils,
+    imgAlt: "Textutils",
+    title: "Text Utils",
+  },
+  {
+    category: "ReactJs",
+    url: "https://image-editor-app-by-anchit.netlify.app/",
+    imgSrc: imageeditor,
+    imgAlt: "AI Image Generator",
+    title: "Image Editor App",
+  },
+  {
+    category: "ReactJs",
+    url: "https://budgetplanner-by-anchit.netlify.app/",
+    imgSrc: budgetplanner,
+    imgAlt: "Budget Planner Image",
+    title: "Budget Planner",
+  },
+  {
+    category: "ReactJs",
     url: "https://text-to-speech-converter-by-anchit.netlify.app/",
-    imgSrc: texttospeech,
+    imgSrc: speechtotext,
     imgAlt: "Speech To Text Converter",
     title: "Speech To Text Converter",
   },
+ 
   {
     category: "ReactJs",
     url: "https://main--password-generato-by-anchit.netlify.app/",
     imgSrc: passwordgenerator,
     imgAlt: "Password Generator",
     title: "Password Generator",
+  },
+  {
+    category: "ReactJs",
+    url: "https://grocery-bud-by-anchit.netlify.app/",
+    imgSrc: grocerybud,
+    imgAlt: "Grocery-bud-image",
+    title: "GroceryBud Project",
   },
   {
     category: "JavaScript",
