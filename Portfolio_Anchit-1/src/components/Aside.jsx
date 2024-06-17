@@ -1,11 +1,15 @@
+import React, { useState } from 'react';
 import profile_photo from "../assets/images/profile_photo.jpeg";
 
-
-
-
 const Aside = () => {
+  const [isInfoVisible, setIsInfoVisible] = useState(false);
+
+  const handleToggleClick = () => {
+    setIsInfoVisible(prevState => !prevState);
+  };
+
   return (
-    <aside className="sidebar" data-sidebar="">
+    <aside className={`sidebar ${isInfoVisible ? 'active' : ''}`} data-sidebar="">
       <div className="sidebar-info">
         <figure className="avatar-box">
           <img
@@ -23,9 +27,14 @@ const Aside = () => {
           </h1>
           <p className="title">Web developer</p>
         </div>
-        <button className="info_more-btn" data-sidebar-btn="">
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down" />
+
+        <button 
+          className="info_more-btn" 
+          data-sidebar-btn="" 
+          onClick={handleToggleClick}
+        >
+          <span>{isInfoVisible ? 'Hide Contacts' : 'Show Contacts'}</span>
+          <ion-icon name={isInfoVisible ? 'chevron-up' : 'chevron-down'} />
         </button>
       </div>
       <div className="sidebar-info_more">

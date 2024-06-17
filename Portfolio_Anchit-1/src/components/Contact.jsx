@@ -1,4 +1,43 @@
+
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
+
+
+
 const Contact = () => {
+  const Template_id = "template_5s31x1g";
+  const Service_id = "service_ug8egkm";
+  const public_key = "X1s2X6D8UnGx1OZgM";
+
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSendMessage = ()=>{
+    var templateParams = {
+      name: fullName,
+      email : email,
+      message: message,
+    };
+    
+    emailjs.send(Service_id, Template_id, templateParams, {
+    publicKey: public_key,
+  }).then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert("Your message has been sent successfully");
+      },
+      (error) => {
+        console.log('FAILED...', error);
+      },
+    );
+
+    setFullName("");
+    setEmail("");
+    setMessage("");
+
+  }
+
   return (
     <article className="contact" data-page="contact">
       <header>
@@ -25,6 +64,8 @@ const Contact = () => {
               placeholder="Full name"
               required=""
               data-form-input=""
+              onChange={(e) => setFullName(e.target.value)}
+              value={fullName}
             />
             <input
               type="email"
@@ -33,6 +74,8 @@ const Contact = () => {
               placeholder="Email address"
               required=""
               data-form-input=""
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
             />
           </div>
           <textarea
@@ -42,8 +85,10 @@ const Contact = () => {
             required=""
             data-form-input=""
             defaultValue={""}
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}            
           />
-          <button className="form-btn" type="submit" data-form-btn="">
+          <button className="form-btn" type="submit" data-form-btn="" onClick={(e)=>{e.preventDefault();handleSendMessage();}}>
             <ion-icon name="paper-plane" />
             <span>Send Message</span>
           </button>
