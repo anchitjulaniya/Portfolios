@@ -94,13 +94,13 @@ const Aside = () => {
           <li className="social-item">
             <a
               className="social-link"
-              href="www.linkedin.com/in/anchit-julaniya-b13632175"
+              href="https://www.linkedin.com/in/anchit-julaniya-b13632175/"
             >
               <ion-icon name="logo-linkedin" />
             </a>
           </li>
           <li className="social-item">
-            <a className="social-link" href="#">
+            <a className="social-link" href="https://www.instagram.com/anchitjulaniya?igsh=MWU5bnFpNHR2ZTViaQ==">
               <ion-icon name="logo-instagram" />
             </a>
           </li>
