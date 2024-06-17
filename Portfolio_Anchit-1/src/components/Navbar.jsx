@@ -1,30 +1,48 @@
-import { NavLink,Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-list">
         <li className="navbar-item">
-          <Link to="/" className="navbar-link  active"  >
+          <NavLink
+            exact
+            to="/"
+            className="navbar-link"
+            activeClassName="active"
+          >
             About
-          </Link>
+          </NavLink>
         </li>
         <li className="navbar-item">
-          <Link to="/resume"  className="navbar-link"  >
+          <NavLink
+            to="/resume"
+            className="navbar-link"
+            activeClassName="active"
+          >
             Resume
-          </Link>
+          </NavLink>
         </li>
         <li className="navbar-item">
-          <Link to="/portfolio"  className="navbar-link"  >
+          <NavLink
+            to="/portfolio"
+            className="navbar-link"
+            activeClassName="active"
+          >
             Portfolio
-          </Link>
+          </NavLink>
         </li>
         {/* <li class="navbar-item">
-      <button class="navbar-link" data-nav-link>Blog</button>
-    </li> */}
+          <button class="navbar-link" data-nav-link>Blog</button>
+        </li> */}
         <li className="navbar-item">
-          <Link to="/contact"  className="navbar-link"  >
+          <NavLink
+            to="/contact"
+            className="navbar-link"
+            activeClassName="active"
+          >
             Contact
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>
