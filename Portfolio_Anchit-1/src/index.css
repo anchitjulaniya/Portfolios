@@ -901,29 +901,33 @@
     border-radius: 14px;
     font-size: var(--fs-6);
     font-weight: var(--fw-300);
+    transition: 1s ease-in-out;
+    
   }
   
   .filter-select.active .select-icon { transform: rotate(0.5turn); }
   
   .select-list {
     background: var(--eerie-black-2);
-    position: absolute;
+    /* position: absolute; */
     top: calc(100% + 6px);
     width: 100%;
     padding: 6px;
     border: 1px solid var(--jet);
     border-radius: 14px;
     z-index: 2;
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0; */
+    /* visibility: hidden; */
     pointer-events: none;
-    transition: 0.15s ease-in-out;
+    transition: 1s ease-in-out;
+
   }
   
   .filter-select.active + .select-list {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
+    
   }
   
   .select-item button {

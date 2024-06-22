@@ -21,8 +21,6 @@ import budgetplanner from '../assets/images/budgetplanner.png'
 import speechtotext from '../assets/images/speechtotext.png'
 // import  from '../assets/images/'
 
-
-
 const projects = [
   {
     category: "ReactJs",
@@ -45,7 +43,6 @@ const projects = [
     imgAlt: "Geek Foods",
     title: "Geek Foods Project",
   },
-
   {
     category: "ReactJs",
     url: "https://cart-by-anchit.netlify.app/",
@@ -166,9 +163,17 @@ const categories = ["All", "ReactJs", "JavaScript", "HTML-CSS"];
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [isSelectOpen, setIsSelectOpen] = useState(false);
 
   const handleFilterClick = (category) => {
     setSelectedCategory(category);
+    console.log(selectedCategory);
+    setIsSelectOpen(false); // Close the select box after selection
+  };
+
+  const handleSelectClick = () => {
+    console.log(isSelectOpen);
+    setIsSelectOpen(!isSelectOpen); // Toggle the select box
   };
 
   const filteredProjects = selectedCategory === "All" 
@@ -194,23 +199,25 @@ const Portfolio = () => {
           ))}
         </ul>
         <div className="filter-select-box">
-          <button className="filter-select" data-select="">
+          <button className="filter-select" data-select="" onClick={handleSelectClick}>
             <div className="select-value" data-select-value="">
-              Select category
+              {selectedCategory}
             </div>
             <div className="select-icon">
               <ion-icon name="chevron-down" />
             </div>
           </button>
-          <ul className="select-list">
-            {categories.map((category) => (
-              <li className="select-item" key={category}>
-                <button data-select-item="" onClick={() => handleFilterClick(category)}>
-                  {category}
-                </button>
-              </li>
-            ))}
-          </ul>
+          {isSelectOpen && (
+            <ul className="select-list">
+              {categories.map((category) => (
+                <li className="select-item" key={category}>
+                  <button data-select-item="" onClick={() => handleFilterClick(category)}>
+                    {category}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <ul className="project-list">
           {filteredProjects.map(({ category, url, imgSrc, imgAlt, title }) => (
