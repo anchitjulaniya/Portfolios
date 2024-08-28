@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Aside from "./components/Aside";
 import NavBar from "./components/Navbar";
 
+
 const MainPage = () =>{
     return (
     <main>

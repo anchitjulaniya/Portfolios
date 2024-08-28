@@ -15,17 +15,10 @@ const About = () => {
       </header>
       <section className="about-text">
         <p>
-          "I'm a frontend developer proficient in HTML, CSS, Tailwind CSS,
-          JavaScript, and React. With mastery in these frontend technologies,
-          I'm passionate about crafting seamless and engaging user experiences."
+        I'm a Full Stack Developer with a strong command of the MERN stack—MongoDB, Express.js, React, and Node.js. My expertise in these technologies allows me to build dynamic, responsive, and fully functional web applications from the ground up.
         </p>
         <p>
-          My job is to build your website so that it is functional and
-          user-friendly but at the same time attractive. Moreover, I add
-          personal touch to your product and make sure that is eye-catching and
-          easy to use. My aim is to bring across your message and identity in
-          the most creative way.
-        </p>
+        My job is to develop robust, scalable, and user-friendly websites that not only meet functional requirements but also deliver a seamless and engaging user experience. With a keen eye for detail and a passion for clean, efficient code, I ensure your product is both visually appealing and highly performant. My goal is to effectively convey your message and brand identity through creative and intuitive web solutions.</p>
       </section>
       <section className="service">
         <h3 className="h3 service-title">What i'm doing</h3>

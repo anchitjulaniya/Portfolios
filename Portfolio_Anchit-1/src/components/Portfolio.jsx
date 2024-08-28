@@ -19,9 +19,27 @@ import textutils from '../assets/images/textutils.png'
 import imageeditor from '../assets/images/imageeditor.png'
 import budgetplanner from '../assets/images/budgetplanner.png'
 import speechtotext from '../assets/images/speechtotext.png'
+import Rozgar from '../assets/images/Rozgar.png'
+import Sampoorna_Siksha from '../assets/images/Sampoorna_Siksha.png'
+
 // import  from '../assets/images/'
 
 const projects = [
+  
+  {
+    category: "MERN Stack",
+    url: "#",
+    imgSrc: Sampoorna_Siksha,
+    imgAlt: "Sampoorna Siksha",
+    title: "Sampoorna Siksha Project(freelancing)(In Progress)",
+  },
+  {
+    category: "MERN Stack",
+    url: "https://rozgar-dashboard-frontend.onrender.com/",
+    imgSrc: Rozgar,
+    imgAlt: "Rozgar Freelancing Project",
+    title: "Rozgar Project(Freelancing)",
+  },
   {
     category: "ReactJs",
     url: "https://amazon-clone-blue-nu.vercel.app/",
