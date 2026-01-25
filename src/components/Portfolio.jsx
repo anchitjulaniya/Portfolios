@@ -31,14 +31,14 @@ const projects = [
     url: "#",
     imgSrc: Sampoorna_Siksha,
     imgAlt: "Sampoorna Siksha",
-    title: "Sampoorna Siksha Project(freelancing)(In Progress)",
+    title: "Sampoorna Siksha Project",
   },
   {
     category: "MERN Stack",
     url: "https://rozgar-dashboard-frontend.onrender.com/",
     imgSrc: Rozgar,
     imgAlt: "Rozgar Freelancing Project",
-    title: "Rozgar Project(Freelancing)",
+    title: "Rozgar Project",
   },
   {
     category: "ReactJs",
